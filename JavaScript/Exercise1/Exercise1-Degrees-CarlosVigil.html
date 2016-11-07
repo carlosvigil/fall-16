@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Exercise 1 - Degrees, Carlos Vigil</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+		<script>
+			// Carlos Vigil
+			// Prof. W. Rosado
+			// CST152 JavaScript
+			// Sept. 13, 2016
+
+			// Fahrenheit to Centigrade
+
+			var degFah = window.prompt("How many degrees Fahrenheit?");
+			degFah = parseInt(degFah);
+			var degCel = 0;
+
+			var fahToCel = function(degFah) 
+			{
+				return alert(degFah + "° Fahrenheit is equal to a rounded number of " + Math.round(((degFah - 32) * 5 / 9)) + "° Centigrade.");
+			};
+
+			fahToCel(degFah);
+		</script>
+    </body>
+</html>

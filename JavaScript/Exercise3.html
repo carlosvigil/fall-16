@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercise 3 / Chapter 4 - Carlos Vigil</title>
+		<style media="screen">
+			body {
+				color: #fff;
+				background-color: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			// Carlos Vigil
+			// Prof. W. Rosado
+			// CST152 JavaScript
+			// Sept. 27, 2016
+
+			// Exercise 3, Various conversions using a switch statement
+
+			function converter()
+			{ // asking & checking for a conversion type SELECTion
+				do
+				{
+					var userSelect = prompt("Select one of the following conversion options by typing the corresponding number in the text box. \n\n1: Convert inches to feet \n2: Convert feet to inches \n3: Convert feet to yards \n4: Convert yards to feet", 0);
+
+					// testing participation
+					if (userSelect == null)
+					{
+						alert("Hey, now...");
+					}
+
+					// converting string to integer
+					userSelect = parseInt(userSelect);
+
+					// testing numbers
+					if (userSelect < 1 || userSelect > 4)
+					{
+						alert("Try again. The options are from 1-4.");
+					}
+					else if (!Number.isInteger(userSelect))
+					{
+						alert("Only numbers, please.")
+					}
+					// persistence
+				} while (!Number.isInteger(userSelect) || userSelect < 1 || userSelect > 4);
+
+				// asking & checking for the VALue to convert
+				do
+				{
+					var userVal = prompt("Enter the number value to convert.", 0);
+					userVal = parseInt(userVal);
+
+					// number testing
+					if (!Number.isInteger(userVal))
+					{
+						alert("That's not a number, try again.");
+					}
+					else if (userVal === 0) {
+						alert("Something other than zero.");
+					}
+					// persistence
+				} while (!Number.isInteger(userVal) || userVal === 0);
+
+				switch (userSelect)
+				{ // defining actions for selections
+					case 1:
+					// Feet = inches / 12 converts inches to feet.
+						alert(userVal + " in converts to " + userVal/12 + " feet.")
+						break;
+					case 2:
+					// Inches = feet * 12 converts feet to inches.
+						alert(userVal + " ft converts to " + userVal*12 + " inches.")
+						break;
+					case 3:
+					// Yards = feet / 3 converts feet to yards.
+						alert(userVal + " ft converts to " + userVal/3 + " yards.")
+						break;
+					case 4:
+					// Feet = yards * 3 converts yards to feet.
+						alert(userVal + " yd converts to " + userVal*3 + " feet.")
+				}
+				alert("THE END");
+			}
+
+			// calling function
+			converter();
+
+		</script>
+	</body>
+</html>

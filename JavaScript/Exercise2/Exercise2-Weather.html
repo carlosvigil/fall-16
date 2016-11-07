@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<title>Exercise 2 - Weather Selection, Carlos Vigil</title>
+				<meta charset="utf-8">
+		</head>
+		<body>
+		<script>
+			// Carlos Vigil
+			// Prof. W. Rosado
+			// CST152 JavaScript
+			// Sept. 22, 2016
+
+			// Weather Selection
+
+			function weather() {
+				var num = prompt("Give me a number from 1-5.", 1);
+				num = parseInt(num);
+
+				switch(num) {
+					case 1:
+						alert("Today will be sunny.");
+						break;
+					case 2:
+						alert("Chance of rain today.");
+						break;
+					case 3:
+						alert("It will snow today.");
+						break;
+					case 4:
+						alert("It will be mostly cloudy today.");
+						break;
+					case 5:
+						alert("A mixture of snow and rain today.");
+						break;
+					default:
+						alert("That's not a number from 1-5. Try again.");
+						weather();
+				}
+			}
+			weather();
+			alert("This program will run once more, to end it close the page.");
+			weather();
+		</script>
+		</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+				<title>Exercise 2 - Temperature Converter, Carlos Vigil</title>
+				<meta charset="utf-8">
+		</head>
+		<body>
+		<script>
+			// Carlos Vigil
+			// Prof. W. Rosado
+			// CST152 JavaScript
+			// Sept. 22, 2016
+
+			// Temperature Converter
+
+			do
+			{
+				var scale = prompt("What scale would you like to convert to? \(Centigrade or Fahrenheit\)", "Fahrenheit");
+				scale = scale.toLowerCase();
+				var deg = prompt("How many degrees?", 0);
+				deg = parseInt(deg);
+
+				while (deg == NaN)
+				{
+					alert("That's not a number!");
+					deg = prompt("How many degrees?", 0);
+				}
+
+				if (scale == "centigrade")
+				{
+					alert(deg + "° Fahrenheit is equal to a rounded number of " + Math.round((deg - 32) * 5 / 9) + "° Centigrade.");
+				}
+
+				else if (scale == "fahrenheit")
+				{
+					alert(deg + "° Centigrade is equal to a rounded number of " + Math.round(deg * 9 / 5 + 32) + "° Fahrenheit.");
+				}
+
+				else
+				{
+					alert("Try that again. Type in \"Centigrade\" or \"Fahrenheit\".")
+				}
+
+			} while (scale != "centigrade" || scale != "fahrenheit");
+
+		</script>
+		</body>
+</html>
