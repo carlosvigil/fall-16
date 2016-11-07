@@ -33,9 +33,9 @@
 
 							case 1: // Display the history of the browser
 								var histNum = parseInt(prompt("Enter a selection:\n"
-										+ "\n1   Display history forward."
-										+ "\n2   Display history backwards."
-										+ "\n3   Display history using goto."));
+										+ "\n1	 Display history forward."
+										+ "\n2	 Display history backwards."
+										+ "\n3	 Display history using goto."));
 
 								switch (histNum)
 								{
@@ -121,78 +121,14 @@
 								}
 								break;
 
-							case 5: // Display a browser’s user-agent’s string values, use several if else if statements.
-								var navAgent = navigator.userAgent;
-								function getBrowserName()
-								{
-									if (navAgent.indexOf("MSIE") >= 0) {
-										return "MSIE";
-									}
-									else if (navAgent.indexOf("Firefox") >= 0)
-									{
-										return "Firefox";
-									}
-									else if (navAgent.indexOf("Chrome") >= 0)
-									{
-										return "Chrome";
-									}
-									else if (navAgent.indexOf("Safari") >= 0)
-									{
-										return "Safari";
-									}
-									else if (navAgent.indexOf("Opera") >= 0)
-									{
-										return "Opera";
-									}
-									else
-									{
-										return "UNKNOWN";
-									}
-								}
-
-								function getBrowserVersion()
-								{
-									var bro = getBrowserName();
-									var findIndex = navAgent.indexOf(bro) + bro.length + 1;
-									var broVersion = parseFloat(navAgent.substring(findIndex, findIndex + 3));
-									return broVersion;
-								}
-
-								var broName = getBrowserName();
-								var broVersion = getBrowserVersion();
-
-								// if (broName == "MSIE")
-								// {
-								// 	if (broVersion < 9)
-								// 	{
-								// 		document.write("Your version of IE is too old.");
-								// 	}
-								// 	else
-								// 	{
-								// 		document.write("Your version of IE is supported.");
-								// 	}
-								// }
-								// else if (broName == "Firefox.")
-								// {
-								// 	document.write("Firefox is supported.");
-								// }
-								// else if (broName == "Safari")
-								// {
-								// 	document.write("Safari is supported.");
-								// }
-								// else if (broName == "Chrome")
-								// {
-								// 	document.write("Chrome is supported.");
-								// }
-								// else if (broName == "Opera")
-								// {
-								// 	document.write("Opera is supported.");
-								// }
-								// else
-								// {
-								// 	document.write(" Sorry this browser version is not supported");
-								// }
-
+							case 5: // Display a browser’s user-agent’s string values
+								var txt = "";
+								txt += "Browser CodeName: " + navigator.appCodeName + "";
+								txt += "\nBrowser Name: " + navigator.appName + "";
+								txt += "\nBrowser Version: " + navigator.appVersion + "";
+								txt += "\nPlatform: " + navigator.platform + "";
+								txt += "\nUser-agent header: " + navigator.userAgent + "";
+								alert(txt);
 								break;
 
 							default: // Persistence and recursion
@@ -203,12 +139,12 @@
 					// Define a string to use as the displayed menu
 					var menuString = "Welcome to Menu App!"
 							+ "\nMake a selection by entering its number:\n"
-							+ "\n0   Terminate Program"
-							+ "\n1   Display Browser History"
-							+ "\n2   Display Browser's Geolocation"
-							+ "\n3   Display Screen's Color Depth"
-							+ "\n4   Display Country flag"
-							+ "\n5   Display Browser User-Agent Values";
+							+ "\n0	 Terminate Program"
+							+ "\n1	 Display Browser History"
+							+ "\n2	 Display Browser's Geolocation"
+							+ "\n3	 Display Screen's Color Depth"
+							+ "\n4	 Display Country flag"
+							+ "\n5	 Display Browser User-Agent Values";
 
 					// Ask for a selection and convert the string to an interger
 					var selectNum = parseInt(prompt(menuString));
