@@ -1,0 +1,33 @@
+@import "reset.css";
+
+body {
+	color: #fff;
+	background-color: hsl(0, 0%, 10%);
+	height: 100%;
+	font-family: serif;
+}
+
+.links {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+.purple {
+	color: hsl(275, 100%, 50%);
+}
+
+.orange {
+	color: hsl(45, 100%, 50%);
+}
+
+.red {
+	color: hsl(7, 100%, 50%);
+}
+
+.white {
+	color: hsl(0, 0%, 100%);
+}
+
+.blue {
+	color: hsl(207, 100%, 50%);
+}

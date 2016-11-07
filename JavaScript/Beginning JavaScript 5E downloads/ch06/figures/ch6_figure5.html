@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Chapter 6, Figure 5</title>
+</head>
+<body>
+    <script>
+        var myString = "Hello world!, let's look at boundaries said 007.";
+
+        var myRegExp = /\B/g;
+        myString = myString.replace(myRegExp, "|");
+        alert(myString);
+    </script>
+</body>
+</html>

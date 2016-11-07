@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>Chapter 7, Example 2</title>
+</head>
+<body>
+    <script>
+        var myDate = new Date();
+        myDate.setUTCHours(12);
+        myDate.setUTCMinutes(0);
+        myDate.setUTCSeconds(0);
+
+        var html = "<p>" +  myDate.toUTCString() + "</p>";
+        html += "<p>" +  myDate.toLocaleString() + "</p>";
+
+        document.write(html);
+    </script>
+</body>
+</html>
