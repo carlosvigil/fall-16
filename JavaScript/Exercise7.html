@@ -1,112 +1,109 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Exercise 7 / Chapter 9 - Carlos Vigil</title>
-  </head>
-  <body>
-    <script>
-      // Carlos Vigil
-      // Prof. W. Rosado
-      // CST152 JavaScript
-      // Nov 10, 2016
+	<head>
+		<meta charset="utf-8">
+		<title>Exercise 7 / Chapter 9 - Carlos Vigil</title>
+	</head>
+	<body>
+		<script>
+			// Carlos Vigil
+			// Prof. W. Rosado
+			// CST152 JavaScript
+			// Nov 10, 2016
 
-      // Exercise 7 Chapter 9
+			// Exercise 7 Chapter 9
 
-      //  Create a program that:
-      var divBanner = document.getElementById("divBanner");
-          divAdvert = document.getElementById("divAdvert");
+			// Create a program that:
+			var newDiv = document.createElement("div");
 
-      function sevenOne()
-      // 1.  Displays a <div id="divBanner"> with the declaration properties and
-      // values as listed:
-      //      left 0
-      //      top 0
-      //      height 50px
-      {
-        document.body.appendChild(document.createElement("div"));
-        document.body.firstChild.id = "divBanner";
-        //divBanner.style.left = "0";
-        //divBanner.style.top = "0";
-        //divBanner.style.height = "50px";
-      }
-      sevenOne();
-
-
-      function sevenTwo()
-      // 2.  Displays a <div id="divAdvert">This is advertisement space.</div>
-      // with the declaration properties and values as listed:
-      //      position absolute
-      //      font 40px Arial
-      //      top 10px
-      //      left 10px
-      {
-       var adText = document.createTextNode("This is advertisement space.");
-
-       document.body.appendChild(document.createElement("div"));
-       document.body.firstChild.nextSibling.id = "divAdvert";
-       divAdvert.appendChild(adText);
-       divAdvert.style.position = "absolute";
-       divAdvert.style.font = "40px, Arial";
-       divAdvert.style.top = "10px";
-       divAdvert.style.left = "10px";
-      }
-      sevenTwo();
+			function sevenOne()
+			// 1.  Displays a <div id="divBanner"> with the declaration properties and
+			// values as listed:
+			//		left 0
+			//		top 0
+			//		height 50px
+			{
+				newDiv.id = "divBanner";
+				newDiv.style.left = "0";
+				newDiv.style.top = "0";
+				newDiv.style.height = "50px";
+				document.body.appendChild(newDiv);
+			}
+			sevenOne();
 
 
-      function sevenThree()
-      // 3.  Using a function called doAnimation(), display the advertisement
-      // letters of the <div id="divAdvert"> scrolling to the right every two
-      // pixels. When it reaches 600 pixels it changes direction then scrolls to
-      // the left, until it reaches 10 pixels, where it changes and scrolls to the
-      // right again to continue the process.
-      {
-        var change = false;
+			function sevenTwo()
+			// 2.  Displays a <div id="divAdvert">This is advertisement space.</div>
+			// with the declaration properties and values as listed:
+			//		position absolute
+			//		font 40px Arial
+			//		top 10px
+			//		left 10px
+			{
+				var adText = document.createTextNode("This is advertisement space.");
+				newDiv = document.createElement("div");
 
-        function doAnimation()
-        {
-          var currentLeft = divAdvert.offsetLeft,
-              newLocation;
+				newDiv.id = "divAdvert";
+				newDiv.style.position = "absolute";
+				newDiv.style.font = "40px, Arial";
+				newDiv.style.top = "10px";
+				newDiv.style.left = "10px";
+				newDiv.appendChild(adText);
+				document.body.appendChild(newDiv);
+			}
+			sevenTwo();
 
-          if (!change)
-          {
-            newLocation = currentLeft + 2;
 
-            if (currentLeft == 600)
-            {
-              change = true;
-            }
-          } else
-          {
-            newLocation = currentLeft - 2;
+			function sevenThree()
+			// 3.  Using a function called doAnimation(), display the advertisement
+			// letters of the <div id="divAdvert"> scrolling to the right every two
+			// pixels. When it reaches 600 pixels it changes direction then scrolls to
+			// the left, until it reaches 10 pixels, where it changes and scrolls to the
+			// right again to continue the process.
+			{
+				var change = false;
 
-            if (currentLeft == 0)
-            {
-              change = false;
-            }
-          }
+				function doAnimation()
+				{
+					var divAdvert = document.getElementById("divAdvert");
+					var currentLeft = divAdvert.offsetLeft,
+						newLocation;
 
-          divAdvert.style.left = newLocation + "px";
-        }
+					divAdvert.style.backgroundColor = "#cc89ab";
+					divAdvert.style.color = "brown";
 
-        setInterval(doAnimation, 10);
-      }
-      sevenThree();
+					if (!change)
+					{
+						newLocation = currentLeft + 2;
 
-      // 4.  The background color of the banner should be a pinkish color of
-      // #cc89ab to be set within the doAnimation function and not the
-      // style sheet.  The advertisement character color should be "brown" and also
-      // set within the doAnimation function.
+						if (currentLeft == 600)
+						{
+							change = true;
+						}
+					} else
+					{
+						newLocation = currentLeft - 2;
 
-      // 5.  Using the setInterval method, call the function in step three,
-      // which will begin and repeat the process every 50 milliseconds.  This
-      // should be similar to exercise question #2 on page 269.
+						if (currentLeft == 0)
+						{
+							change = false;
+						}
+					}
 
-      // 6.  Once you get step 5 to work, modify the advertising message to say
-      // "Gateway is Swinging!!!" by using the DOM's Node object Navigation
-      // properties on page 250.
+					divAdvert.style.left = newLocation + "px";
+				}
 
-      // Due by midnight, November 8, 2016.
-    </script>
-  </body>
+				// 6.  Once you get step 5 to work, modify the advertising message to say
+				// "Gateway is Swinging!!!" by using the DOM's Node object Navigation
+				// properties on page 250.
+
+				document.body.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nodeValue="Gateway is Swinging!!!";
+
+				setInterval(doAnimation, 50);
+			}
+			sevenThree();
+
+
+		</script>
+	</body>
 </html>

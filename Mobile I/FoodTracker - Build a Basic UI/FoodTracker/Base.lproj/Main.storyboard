@@ -40,7 +40,7 @@
                                         <rect key="frame" x="0.0" y="74.333333333333343" width="151" height="30"/>
                                         <state key="normal" title="Set Default Label Text"/>
                                         <connections>
-                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UPO-gQ-IJi"/>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="brV-bQ-Ro0"/>
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" layoutMarginsFollowReadableWidth="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="UzU-tM-Tyn">
@@ -50,7 +50,7 @@
                                             <constraint firstAttribute="width" secondItem="UzU-tM-Tyn" secondAttribute="height" multiplier="1:1" id="h7p-Vj-CB2"/>
                                         </constraints>
                                         <connections>
-                                            <outletCollection property="gestureRecognizers" destination="JG9-pi-dt9" appends="YES" id="6dO-ab-hQr"/>
+                                            <outletCollection property="gestureRecognizers" destination="BDG-ck-20a" appends="YES" id="abT-JD-a02"/>
                                         </connections>
                                     </imageView>
                                 </subviews>
@@ -74,9 +74,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="JG9-pi-dt9">
+                <tapGestureRecognizer id="BDG-ck-20a">
                     <connections>
-                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="S1J-sv-0vG"/>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="kHv-A4-hdH"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
