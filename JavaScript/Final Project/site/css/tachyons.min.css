@@ -1,4 +1,5 @@
-/*! TACHYONS v4.5.3 | http://tachyons.io */html {
+/*! TACHYONS v4.5.3 | http://tachyons.io */
+html {
 	font-family:sans-serif;
 	line-height:1.15;
 	-ms-text-size-adjust:100%;
@@ -1260,19 +1261,19 @@ img {
 	color:#f4f4f4
 }
 .white {
-	color:#fffffe
+	color: hsl(0, 0%, 100%)
 }
 .dark-red {
 	color:#e7040f
 }
 .red {
-	color:#ff1e00
+	color: hsl(7, 100%, 50%)
 }
 .light-red {
 	color:#ff725c
 }
 .orange {
-	color:#ffc000
+	color: hsl(45, 100%, 50%)
 }
 .gold {
 	color:#ffb700
@@ -1284,7 +1285,7 @@ img {
 	color:#fbf1a9
 }
 .purple {
-	color:#9600ff
+	color:hsl(275, 100%, 50%)
 }
 .light-purple {
 	color:#a463f2
@@ -1317,7 +1318,7 @@ img {
 	color:#00449e
 }
 .blue {
-	color:#008bff
+	color: hsl(207, 100%, 50%);
 }
 .light-blue {
 	color:#96ccff
