@@ -25,6 +25,7 @@ progress {
 	display:none
 }
 a {
+	color: hsl(105, 100%, 50%);
 	background-color:transparent;
 	-webkit-text-decoration-skip:objects
 }
