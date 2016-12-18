@@ -1,1 +1,0 @@
-This zip contains the code and support files for every chapter of the book.  We hope you have fun with these files and that you find them useful and informative. Enjoy.
